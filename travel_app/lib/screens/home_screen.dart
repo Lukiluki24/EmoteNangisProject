@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import '/widgets/bottom_nav_bar.dart';
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/destination_card.dart';
 import '../widgets/service_category_cart.dart';
-import '/models/destination.dart';
-import '/utils/constants.dart';
-import '/screens/all_pictures_screen.dart';
+import '../models/destination.dart';
+import '../utils/constants.dart';
+import 'all_pictures_screen.dart';
+import 'cart_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -225,7 +226,15 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icons.flight,
             title: 'Tiket\nPesawat',
             color: const Color(0xFF3498DB),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      CartScreen(), // buka halaman yg bisa nambah ke cart
+                ),
+              );
+            },
           ),
           ServiceCategoryCard(
             icon: Icons.hotel,
