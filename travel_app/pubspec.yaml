@@ -23,6 +23,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/easybook_logo.png
+    - assets/images/
   fonts:
       - family: Poppins
         fonts:
