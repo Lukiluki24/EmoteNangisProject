@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '/widgets/bottom_nav_bar.dart';
 import '../widgets/destination_card.dart';
-import '/widgets/destination_card.dart';
+import '../widgets/service_category_cart.dart';
 import '/models/destination.dart';
 import '/utils/constants.dart';
 import '/screens/all_pictures_screen.dart';
@@ -295,9 +295,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder:
-                              (context) =>
-                                  AllPicturesScreen(destinations: destinations),
+                          builder: (context) =>
+                              AllPicturesScreen(destinations: destinations),
                         ),
                       );
                     },

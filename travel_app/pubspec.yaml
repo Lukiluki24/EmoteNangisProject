@@ -10,6 +10,9 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
+  firebase_core: ^3.13.1
+  firebase_auth: ^5.5.4
+  provider: ^6.1.1
 
 dev_dependencies:
   flutter_test:
@@ -19,5 +22,12 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
-    - assets/images/other_destinations/
+    - assets/easybook_logo.png
+  fonts:
+      - family: Poppins
+        fonts:
+          - asset: fonts/Poppins-Regular.ttf
+          - asset: fonts/Poppins-Medium.ttf
+            weight: 500 
+          - asset: fonts/Poppins-Bold.ttf
+            weight: 700 

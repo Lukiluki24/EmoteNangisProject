@@ -1,25 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '/screens/home_screen.dart';
+import 'package:provider/provider.dart';
+import 'provider/auth_provider.dart';
+import 'screens/login_screen.dart';
 
-void main() {
-  runApp(const TravelApp());
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(MyApp());
 }
 
-class TravelApp extends StatelessWidget {
-  const TravelApp({Key? key}) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Travel App',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-        textTheme: GoogleFonts.poppinsTextTheme(),
-        scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+    return ChangeNotifierProvider(
+      create: (context) => AuthProvider(),
+      child: MaterialApp(
+        title: 'Easy Travel',
+        theme: ThemeData(
+          primarySwatch: Colors.teal,
+          fontFamily: 'Poppins',
+          scaffoldBackgroundColor: const Color(0xFFF5F5F5),
+        ),
+        home: LoginScreen(),
+        debugShowCheckedModeBanner: false,
       ),
-      home: const HomeScreen(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }

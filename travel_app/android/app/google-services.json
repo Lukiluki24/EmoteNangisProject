@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "560198478988",
+    "project_id": "emotenangis-9a3c2",
+    "storage_bucket": "emotenangis-9a3c2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560198478988:android:9f4b197ac5b714dd681fa9",
+        "android_client_info": {
+          "package_name": "com.example.travel_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbztM_ZFvz8xoJ9wb_wVaEx05zcqb-Hcw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

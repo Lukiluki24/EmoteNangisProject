@@ -7,7 +7,7 @@ class DestinationCard extends StatelessWidget {
   final VoidCallback? onTap;
 
   const DestinationCard({Key? key, required this.destination, this.onTap})
-    : super(key: key);
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
